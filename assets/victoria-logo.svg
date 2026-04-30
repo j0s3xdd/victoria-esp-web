@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+
+<line x1="150" y1="215" x2="1050" y2="215" stroke="#7a9e7e" stroke-width="1.5"/>
+  <circle cx="160" cy="215" r="7" fill="#7a9e7e"/>
+  <circle cx="1040" cy="215" r="7" fill="#7a9e7e"/>
+
+  <text x="600" y="185" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" letter-spacing="14" fill="#4a6741">Victoria</text>
+
+  <text x="600" y="258" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="600" letter-spacing="7" fill="#5a4030">ESPECIALISTA EN ALIMENTACIÓN</text>
+
+  <text x="600" y="290" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="600" letter-spacing="7" fill="#5a4030">Y BIENESTAR</text>
+
+  <text x="600" y="345" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" letter-spacing="6" fill="#8a7560">· ONLINE · TODA ESPAÑA ·</text>
+
+  <line x1="150" y1="70" x2="150" y2="100" stroke="#7a9e7e" stroke-width="1.5"/>
+  <line x1="150" y1="70" x2="180" y2="70" stroke="#7a9e7e" stroke-width="1.5"/>
+
+  <line x1="1050" y1="70" x2="1050" y2="100" stroke="#7a9e7e" stroke-width="1.5"/>
+  <line x1="1050" y1="70" x2="1020" y2="70" stroke="#7a9e7e" stroke-width="1.5"/>
+
+  <line x1="150" y1="330" x2="150" y2="300" stroke="#7a9e7e" stroke-width="1.5"/>
+  <line x1="150" y1="330" x2="180" y2="330" stroke="#7a9e7e" stroke-width="1.5"/>
+
+  <line x1="1050" y1="330" x2="1050" y2="300" stroke="#7a9e7e" stroke-width="1.5"/>
+  <line x1="1050" y1="330" x2="1020" y2="330" stroke="#7a9e7e" stroke-width="1.5"/>
+
+</svg>
