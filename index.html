@@ -445,17 +445,29 @@ img{display:block}
 .footer-copy{font-size:.74rem;color:rgba(255,255,255,.3)}
 
 /* ══════════ WA PROOFS ══════════ */
-.wapr{background:var(--white)}
+.wapr{background:var(--cream)}
 .wapr-head{text-align:center;max-width:580px;margin:0 auto clamp(2rem,4vw,3rem)}
-.wapr-feat{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:clamp(2rem,4vw,3rem);background:var(--cream);border-radius:24px;padding:clamp(1.5rem,4vw,2.5rem)}
-.wapr-feat-img{border-radius:16px;overflow:hidden;box-shadow:0 8px 36px rgba(0,0,0,.12)}
+.wapr-feat{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:clamp(2rem,4vw,3.5rem)}
+.wapr-feat-img-wrap{position:relative}
+.wapr-feat-img{border-radius:24px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.14)}
 .wapr-feat-img img{width:100%;display:block;height:auto}
-.wapr-fquote{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.55rem);font-style:italic;color:var(--text);line-height:1.55;margin:1.25rem 0 1rem;padding-left:1.25rem;border-left:3px solid var(--terra)}
-.wapr-fquote-by{font-size:.78rem;font-weight:700;color:var(--text-mid);letter-spacing:.1em;text-transform:uppercase}
-.wapr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;align-items:start;margin-top:1.5rem}
-.wapr-item{border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .3s}
-.wapr-item:hover{transform:translateY(-4px)}
-.wapr-item img{width:100%;display:block;height:auto}
+.wapr-badge-pill{position:absolute;bottom:1.25rem;padding:.4rem .9rem;border-radius:100px;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
+.wapr-badge-pill.antes{left:5%;background:rgba(0,0,0,.6);color:rgba(255,255,255,.8)}
+.wapr-badge-pill.despues{right:5%;background:var(--green);color:#fff}
+.wapr-wa-tag{display:inline-flex;align-items:center;gap:.45rem;background:#25D366;color:#fff;padding:.32rem .85rem;border-radius:100px;font-size:.7rem;font-weight:700;letter-spacing:.04em;margin-bottom:1.25rem}
+.wapr-wa-tag svg{width:13px;height:13px;flex-shrink:0}
+.wapr-wa-tag svg path{fill:#fff}
+.wapr-fquote{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.5rem);font-style:italic;color:var(--text);line-height:1.55;margin:.75rem 0 1.25rem;padding:1rem 1.25rem;background:var(--white);border-radius:0 16px 16px 0;border-left:3px solid var(--terra);box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.wapr-fquote-by{font-size:.78rem;font-weight:700;color:var(--text-mid);letter-spacing:.09em;text-transform:uppercase}
+.wapr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;align-items:start}
+.wapr-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.08);transition:transform .35s,box-shadow .35s}
+.wapr-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,.12)}
+.wapr-card-img{overflow:hidden;height:380px}
+.wapr-card-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s ease}
+.wapr-card:hover .wapr-card-img img{transform:scale(1.04)}
+.wapr-card-foot{padding:1.1rem 1.25rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-top:1px solid var(--border)}
+.wapr-card-result{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--green-dark);line-height:1.3}
+.wapr-card-chip{flex-shrink:0;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-dark);background:var(--green-light);padding:.28rem .72rem;border-radius:100px}
 
 /* ══════════ GARANTIA ══════════ */
 .garantia{background:var(--green-dark);padding:clamp(2.5rem,5vw,4rem) 0}
@@ -479,7 +491,6 @@ img{display:block}
 /* ══════════ MOBILE ══════════ */
 @media(max-width:1024px){
   .pq-grid{grid-template-columns:repeat(2,1fr)}
-  .wapr-grid{grid-template-columns:repeat(2,1fr)}
   .pasos{grid-template-columns:repeat(2,1fr)}
   .pasos::before{display:none}
   .footer-in{grid-template-columns:1fr 1fr}
@@ -514,7 +525,7 @@ img{display:block}
   .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   /* LAYOUTS */
   .wapr-feat{grid-template-columns:1fr}
-  .wapr-grid{grid-template-columns:repeat(2,1fr)}
+  .wapr-card-img{height:300px}
   .hero .wrap,.historia .wrap,.reset45-inner,.contacto .wrap{grid-template-columns:1fr;gap:2.5rem}
   .hero-img{order:-1}
   .hero-photo{aspect-ratio:1;border-radius:4px 40px 4px 40px}
@@ -627,38 +638,78 @@ img{display:block}
 <!-- TESTIMONIOS WHATSAPP -->
 <section class="wapr sec" id="pruebas">
   <div class="wrap">
+
     <div class="wapr-head rv">
       <span class="overline">Resultados del RESET 45</span>
       <h2>Lo que pasa<br><em>en 5 días.</em></h2>
-      <p>Mensajes y fotos reales de clientas durante el programa. Sin filtros, sin editar.</p>
+      <p>Mensajes y fotos reales de clientas. Sin filtros, sin editar, directo de WhatsApp.</p>
     </div>
 
-    <div class="wapr-feat rv">
-      <div class="wapr-feat-img">
-        <img src="assets/testimonios/t-mari-antes-despues.jpeg" alt="Antes y después del RESET 45 — Mari, Ciudad Real" loading="lazy">
+    <!-- Featured: Mari antes/después -->
+    <div class="wapr-feat">
+      <div class="wapr-feat-img-wrap rv-l">
+        <div class="wapr-feat-img">
+          <img src="assets/testimonios/t-mari-antes-despues.jpeg" alt="Antes y después del RESET 45 — Mari, Ciudad Real" loading="lazy">
+        </div>
+        <span class="wapr-badge-pill antes">Antes</span>
+        <span class="wapr-badge-pill despues">Después</span>
       </div>
       <div class="rv-r d2">
-        <span class="overline overline-terra">La transformación más impactante</span>
+        <div class="wapr-wa-tag">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Mensaje real · WhatsApp
+        </div>
+        <span class="overline overline-terra">La transformación que más emociona</span>
         <blockquote class="wapr-fquote">
-          "Menuda diferencia con las primeras fotos que te mandé antes de empezar el programa. Nunca pensé que me podía poner un top y malla así — en este color. Yo siempre iba de negro."
+          "Menuda diferencia con las primeras fotos que te mandé. Nunca pensé que me podía poner un top y malla así — en este color. Yo siempre iba de negro."
         </blockquote>
         <p class="wapr-fquote-by">Mari · Ciudad Real · RESET 45 · 5 días</p>
       </div>
     </div>
 
+    <!-- Grid de 4 capturas -->
     <div class="wapr-grid">
-      <div class="wapr-item rv d1">
-        <img src="assets/testimonios/t-toni-bascula.jpeg" alt="Toñi: de 70.2kg a 67.9kg en 4 días" loading="lazy">
+
+      <div class="wapr-card rv d1">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/t-toni-bascula.jpeg" alt="Toñi: de 70.2kg a 67.9kg en 4 días" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">−2.3 kg en solo 4 días</div>
+          <div class="wapr-card-chip">Toñi · RESET 45</div>
+        </div>
       </div>
-      <div class="wapr-item rv d2">
-        <img src="assets/testimonios/t-1300g-medidas.jpeg" alt="1.3kg y medidas reducidas en 5 días" loading="lazy">
+
+      <div class="wapr-card rv d2">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/t-1300g-medidas.jpeg" alt="1.3kg y medidas reducidas en 5 días" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">−1.3 kg · 4 cm menos de caderas</div>
+          <div class="wapr-card-chip">5 días</div>
+        </div>
       </div>
-      <div class="wapr-item rv d3">
-        <img src="assets/testimonios/t-mariajose-3kg.jpeg" alt="Maria José: 3kg en 5 días de desinflamación" loading="lazy">
+
+      <div class="wapr-card rv d3">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/t-mariajose-3kg.jpeg" alt="Maria José: 3kg en 5 días" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">−3 kg en 5 días</div>
+          <div class="wapr-card-chip">Maria José</div>
+        </div>
       </div>
-      <div class="wapr-item rv d4">
-        <img src="assets/testimonios/t-3dias-900g.jpeg" alt="900g y 3cm de cadera en solo 3 días" loading="lazy">
+
+      <div class="wapr-card rv d4">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/t-3dias-900g.jpeg" alt="900g y 3cm de cadera en 3 días" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">−900 g y 3 cm de cadera</div>
+          <div class="wapr-card-chip">Solo 3 días</div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
