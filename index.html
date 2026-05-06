@@ -444,9 +444,42 @@ img{display:block}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap;gap:.75rem}
 .footer-copy{font-size:.74rem;color:rgba(255,255,255,.3)}
 
+/* ══════════ WA PROOFS ══════════ */
+.wapr{background:var(--white)}
+.wapr-head{text-align:center;max-width:580px;margin:0 auto clamp(2rem,4vw,3rem)}
+.wapr-feat{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:clamp(2rem,4vw,3rem);background:var(--cream);border-radius:24px;padding:clamp(1.5rem,4vw,2.5rem)}
+.wapr-feat-img{border-radius:16px;overflow:hidden;box-shadow:0 8px 36px rgba(0,0,0,.12)}
+.wapr-feat-img img{width:100%;display:block;height:auto}
+.wapr-fquote{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.55rem);font-style:italic;color:var(--text);line-height:1.55;margin:1.25rem 0 1rem;padding-left:1.25rem;border-left:3px solid var(--terra)}
+.wapr-fquote-by{font-size:.78rem;font-weight:700;color:var(--text-mid);letter-spacing:.1em;text-transform:uppercase}
+.wapr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;align-items:start;margin-top:1.5rem}
+.wapr-item{border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .3s}
+.wapr-item:hover{transform:translateY(-4px)}
+.wapr-item img{width:100%;display:block;height:auto}
+
+/* ══════════ GARANTIA ══════════ */
+.garantia{background:var(--green-dark);padding:clamp(2.5rem,5vw,4rem) 0}
+.garantia-inner{max-width:600px;margin:0 auto;text-align:center}
+.garantia-icon{width:64px;height:64px;background:rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.garantia-icon svg{width:28px;height:28px;stroke:#fff;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.garantia h3{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;font-weight:400;margin-bottom:1rem}
+.garantia p{font-size:.95rem;color:rgba(255,255,255,.72);line-height:1.82}
+
+/* ══════════ FC EXTRAS ══════════ */
+.fc-guarantee{font-size:.76rem;font-weight:600;color:rgba(255,255,255,.7);margin:.5rem 0 1.1rem;padding:.38rem .85rem;background:rgba(255,255,255,.1);border-radius:8px;display:inline-block}
+.fc-social-proof{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-bottom:.4rem}
+
+/* ══════════ FLOAT WA ══════════ */
+.float-wa{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;display:flex;align-items:center;gap:.65rem;background:#25D366;color:#fff;padding:.9rem 1.5rem;border-radius:100px;font-size:.88rem;font-weight:700;box-shadow:0 4px 28px rgba(37,211,102,.45);text-decoration:none;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.float-wa.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.float-wa svg{width:20px;height:20px;flex-shrink:0}
+.float-wa svg path{fill:#fff}
+@media(max-width:768px){.float-wa .float-wa-lbl{display:none}}
+
 /* ══════════ MOBILE ══════════ */
 @media(max-width:1024px){
   .pq-grid{grid-template-columns:repeat(2,1fr)}
+  .wapr-grid{grid-template-columns:repeat(2,1fr)}
   .pasos{grid-template-columns:repeat(2,1fr)}
   .pasos::before{display:none}
   .footer-in{grid-template-columns:1fr 1fr}
@@ -480,6 +513,8 @@ img{display:block}
   .nav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
   .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   /* LAYOUTS */
+  .wapr-feat{grid-template-columns:1fr}
+  .wapr-grid{grid-template-columns:repeat(2,1fr)}
   .hero .wrap,.historia .wrap,.reset45-inner,.contacto .wrap{grid-template-columns:1fr;gap:2.5rem}
   .hero-img{order:-1}
   .hero-photo{aspect-ratio:1;border-radius:4px 40px 4px 40px}
@@ -529,8 +564,8 @@ img{display:block}
   <div class="wrap">
     <div class="rv">
       <div class="hero-eyebrow">Especialista en Alimentación para la Pérdida de Peso y Bienestar · Toda España</div>
-      <h1>Recupera tu energía<br>y tu <em>peso ideal.</em></h1>
-      <p class="hero-sub">Sin dietas extremas, sin efecto rebote. Un método personalizado que funciona a cualquier edad — porque perder peso y sentirte bien no tiene fecha de caducidad.</p>
+      <h1>Peso estancado,<br>hinchazón, cansancio.<br><em>No es tu culpa.</em></h1>
+      <p class="hero-sub">Después de los 45 tu cuerpo funciona diferente — y las dietas de siempre ya no sirven. RESET 45 te da el método que necesita tu cuerpo <em>ahora mismo</em>: sin pasar hambre, sin prohibiciones, en solo 5 días.</p>
       <div class="hero-actions">
         <a href="https://wa.me/34652686410?text=RESET%2045" class="btn-wa" target="_blank">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -582,9 +617,48 @@ img{display:block}
 <section class="hook sec">
   <div class="wrap">
     <div class="hook-inner rv">
-      <p class="hook-q">"¿Llevas años intentándolo y tu cuerpo no responde como antes?"</p>
-      <p class="hook-b">No es falta de voluntad.</p>
-      <p class="hook-p">A partir de los 45, el cuerpo necesita un enfoque diferente — y eso es exactamente lo que hace RESET 45. En solo 5 días notarás que algo cambia. No porque sea magia, sino porque por fin tienes el método que se ajusta a ti.</p>
+      <p class="hook-q">"Llevas años haciéndolo bien. Comes sano, te mueves — y el cuerpo no responde."</p>
+      <p class="hook-b">No es tu culpa. Es que nadie te ha dado el método que funciona para tu cuerpo ahora.</p>
+      <p class="hook-p">A partir de los 45 todo cambia: las hormonas, el metabolismo, la forma en que acumulas. Las dietas de siempre ya no sirven. RESET 45 te da el método que necesita tu cuerpo en esta etapa — y en 5 días lo notas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS WHATSAPP -->
+<section class="wapr sec" id="pruebas">
+  <div class="wrap">
+    <div class="wapr-head rv">
+      <span class="overline">Resultados del RESET 45</span>
+      <h2>Lo que pasa<br><em>en 5 días.</em></h2>
+      <p>Mensajes y fotos reales de clientas durante el programa. Sin filtros, sin editar.</p>
+    </div>
+
+    <div class="wapr-feat rv">
+      <div class="wapr-feat-img">
+        <img src="assets/testimonios/t-mari-antes-despues.jpeg" alt="Antes y después del RESET 45 — Mari, Ciudad Real" loading="lazy">
+      </div>
+      <div class="rv-r d2">
+        <span class="overline overline-terra">La transformación más impactante</span>
+        <blockquote class="wapr-fquote">
+          "Menuda diferencia con las primeras fotos que te mandé antes de empezar el programa. Nunca pensé que me podía poner un top y malla así — en este color. Yo siempre iba de negro."
+        </blockquote>
+        <p class="wapr-fquote-by">Mari · Ciudad Real · RESET 45 · 5 días</p>
+      </div>
+    </div>
+
+    <div class="wapr-grid">
+      <div class="wapr-item rv d1">
+        <img src="assets/testimonios/t-toni-bascula.jpeg" alt="Toñi: de 70.2kg a 67.9kg en 4 días" loading="lazy">
+      </div>
+      <div class="wapr-item rv d2">
+        <img src="assets/testimonios/t-1300g-medidas.jpeg" alt="1.3kg y medidas reducidas en 5 días" loading="lazy">
+      </div>
+      <div class="wapr-item rv d3">
+        <img src="assets/testimonios/t-mariajose-3kg.jpeg" alt="Maria José: 3kg en 5 días de desinflamación" loading="lazy">
+      </div>
+      <div class="wapr-item rv d4">
+        <img src="assets/testimonios/t-3dias-900g.jpeg" alt="900g y 3cm de cadera en solo 3 días" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -595,7 +669,7 @@ img{display:block}
     <div class="res-head rv">
       <span class="overline">Resultados reales</span>
       <h2>Ellas ya lo<br><em>consiguieron</em></h2>
-      <p>Fotos y resultados de clientas reales. Próximamente sus historias aquí.</p>
+      <p>Números reales de clientas reales. Sin trampa, sin filtro.</p>
     </div>
     <div class="res-grid">
 
@@ -606,7 +680,7 @@ img{display:block}
         </div>
         <div class="res-info">
           <div class="res-name">Ana, 48 años</div>
-          <div class="res-result">RESET 45 · 5 días</div>
+          <div class="res-result">Programa 12 semanas</div>
         </div>
       </div>
 
@@ -617,7 +691,7 @@ img{display:block}
         </div>
         <div class="res-info">
           <div class="res-name">Carmen, 52 años</div>
-          <div class="res-result">RESET 45 · 5 días</div>
+          <div class="res-result">Programa 12 semanas</div>
         </div>
       </div>
 
@@ -638,8 +712,8 @@ img{display:block}
           <div class="res-context">Hábitos para siempre</div>
         </div>
         <div class="res-info">
-          <div class="res-name">Laura, 39 años</div>
-          <div class="res-result">RESET 45 · 5 días</div>
+          <div class="res-name">Laura, 47 años</div>
+          <div class="res-result">Programa 12 semanas</div>
         </div>
       </div>
 
@@ -738,62 +812,27 @@ img{display:block}
       <h2>Cómo puedo<br><em>ayudarte</em></h2>
       <p>Cada mujer es diferente. Cada plan también.</p>
     </div>
-    <div class="srv-grid">
-      <div class="srv-card rv d1">
+    <div class="srv-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="srv-card featured rv d1">
+        <div class="srv-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4>RESET 45 — 5 días</h4>
+        <p>El punto de partida. 5 días de pautas diarias para desinflamar tu cuerpo y empezar a ver resultados. Por solo 49€, sin compromisos de continuidad.</p>
+      </div>
+      <div class="srv-card rv d2">
+        <div class="srv-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Programa 12 Semanas</h4>
+        <p>La transformación completa. 12 semanas con seguimiento semanal, plan personalizado y acompañamiento directo. El cambio que no tiene fecha de caducidad.</p>
+      </div>
+      <div class="srv-card rv d3">
         <div class="srv-icon">
           <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
         <h4>Primera Consulta</h4>
-        <p>Análisis completo de tu situación: historial, hábitos, objetivos y punto de partida real. Sin compromiso.</p>
-      </div>
-      <div class="srv-card rv d2">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
-        <h4>Plan Personalizado</h4>
-        <p>Menú semanal adaptado a tus gustos, rutinas y objetivos. Sin alimentos prohibidos, sin pasar hambre.</p>
-      </div>
-      <div class="srv-card featured rv d3">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h4>Seguimiento Continuo</h4>
-        <p>Control semanal, ajuste del plan y acompañamiento directo por WhatsApp. Nunca estás sola en el proceso.</p>
-      </div>
-      <div class="srv-card rv d4">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/><path d="M12 12c0 3-2 4-2 7a2 2 0 004 0c0-3-2-4-2-7z"/></svg>
-        </div>
-        <h4>Nutrición Hormonal</h4>
-        <p>Especializada en menopausia, perimenopausia y cambios hormonales. Tu cuerpo en esta etapa merece un plan específico.</p>
-      </div>
-      <div class="srv-card rv d5">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h4>Programa 12 Semanas</h4>
-        <p>El programa completo para una transformación real y sostenible. Seguimiento semanal y reeducación alimentaria definitiva.</p>
-      </div>
-      <div class="srv-card rv d1">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <h4>Hambre Emocional</h4>
-        <p>Picoteo sin control, ansiedad con la comida, culpa después de comer. Trabajamos la raíz del problema, no solo el síntoma.</p>
-      </div>
-      <div class="srv-card rv d2">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-        </div>
-        <h4>Pérdida de Peso Real</h4>
-        <p>Sin contar calorías, sin pasar hambre, sin efecto rebote. Perder peso cuando entiendes cómo funciona tu cuerpo es mucho más fácil.</p>
-      </div>
-      <div class="srv-card rv d3">
-        <div class="srv-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h4>Hábitos para Siempre</h4>
-        <p>No sirve de nada una dieta de tres semanas. Te enseño a estructurar tus comidas, tu compra y tu día a día para que el cambio no tenga fecha de caducidad.</p>
+        <p>¿No sabes por dónde empezar? Hablamos de tu situación, tus objetivos y te digo qué camino tiene más sentido para ti. Sin compromiso.</p>
       </div>
     </div>
   </div>
@@ -816,7 +855,9 @@ img{display:block}
           <span class="fc-tag">El primer paso</span>
           <div class="fc-title">RESET 45</div>
           <div class="fc-price">49<sup style="font-size:1rem;font-family:var(--sans)">€</sup> <span style="font-family:var(--sans);font-size:.85rem;opacity:.8">· 5 días</span></div>
+          <div class="fc-guarantee">Garantía total: si en 3 días no notas ningún cambio, te devuelvo el dinero</div>
           <p class="fc-desc">Pago único de 49€. Durante 5 días recibes pautas diarias de alimentación y acompañamiento para desinflamar tu cuerpo. Sin suscripciones, sin letra pequeña.</p>
+          <div class="fc-social-proof">+500 mujeres ya completaron el RESET 45</div>
           <a href="https://wa.me/34652686410?text=RESET%2045" class="btn-wa-fase" target="_blank">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Empezar por 49€
@@ -833,6 +874,19 @@ img{display:block}
       <div class="reset45-bridge rv">
         "El RESET 45 es el primer paso. Si al final de los 5 días notas resultados — y los notarás — el programa completo es el siguiente nivel."
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia">
+  <div class="wrap">
+    <div class="garantia-inner rv">
+      <div class="garantia-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Garantía total de 3 días</h3>
+      <p>Si después de los primeros 3 días no notas ningún cambio — ni menos hinchazón, ni más energía, ni nada — te devuelvo el dinero sin preguntas ni excusas. Así de segura estoy de que este método funciona para ti.</p>
     </div>
   </div>
 </section>
@@ -1043,6 +1097,12 @@ img{display:block}
   </div>
 </footer>
 
+<!-- FLOATING WA BUTTON -->
+<a href="https://wa.me/34652686410?text=RESET%2045" class="float-wa" id="floatWa" target="_blank" aria-label="Empezar RESET 45 por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="float-wa-lbl">Empezar RESET 45 — 49€</span>
+</a>
+
 <script>
 // ── NAV SHRINK
 const nav = document.getElementById('nav');
@@ -1120,6 +1180,15 @@ document.querySelectorAll('.counter').forEach(c => cobs.observe(c));
     const newPer = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
     if(newPer !== perView){ perView = newPer; goTo(0); }
   });
+})();
+
+// ── FLOAT WA
+(function(){
+  const btn = document.getElementById('floatWa');
+  if(!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 400);
+  }, {passive:true});
 })();
 </script>
 </body>
