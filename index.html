@@ -464,6 +464,8 @@ img{display:block}
 .trf-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,.12)}
 .trf-img{position:relative;height:420px;overflow:hidden;background:var(--green-light);display:flex;align-items:center;justify-content:center}
 .trf-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s ease}
+.trf-img-full{height:auto;overflow:visible}
+.trf-img-full img{height:auto;object-fit:initial}
 .trf-card:hover .trf-img img{transform:scale(1.04)}
 .trf-img-ph{color:var(--green-dark);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.45;text-align:center;padding:1rem}
 .trf-body{padding:1.4rem 1.5rem 1.5rem}
@@ -954,7 +956,7 @@ img{display:block}
     </div>
     <div class="trf-grid">
       <div class="trf-card rv d1">
-        <div class="trf-img">
+        <div class="trf-img trf-img-full">
           <img src="assets/testimonios/t-mari-12semanas.png" alt="Antes y después de Mari — Programa 12 Semanas · Ciudad Real" loading="lazy">
         </div>
         <div class="trf-body">
