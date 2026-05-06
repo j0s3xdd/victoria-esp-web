@@ -421,7 +421,7 @@ img{display:block}
 .cinfo-icon{width:40px;height:40px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .cinfo-icon svg{width:18px;height:18px;stroke:var(--green-dark);stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .cinfo-label{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:.15rem}
-.cinfo-val{font-size:.94rem;font-weight:600}
+.cinfo-val{font-size:.94rem;font-weight:600;overflow-wrap:break-word;word-break:break-word}
 .contacto-form{background:var(--cream);border-radius:24px;padding:2.5rem}
 .form-row{margin-bottom:1.25rem}
 .form-row label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mid);margin-bottom:.45rem}
@@ -544,6 +544,7 @@ img{display:block}
 }
 @media(max-width:480px){
   .srv-grid{grid-template-columns:1fr}
+  .wapr-grid{grid-template-columns:1fr}
   .hero-actions{flex-direction:column;align-items:flex-start}
 }
 </style>
@@ -863,7 +864,7 @@ img{display:block}
       <h2>Cómo puedo<br><em>ayudarte</em></h2>
       <p>Cada mujer es diferente. Cada plan también.</p>
     </div>
-    <div class="srv-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="srv-grid">
       <div class="srv-card featured rv d1">
         <div class="srv-icon">
           <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
