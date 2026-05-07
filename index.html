@@ -444,20 +444,20 @@ img{display:block}
 .wapr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;align-items:start}
 .wapr-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.08);transition:transform .35s,box-shadow .35s}
 .wapr-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,.12)}
-.wapr-card-img{overflow:hidden;height:380px}
-.wapr-card-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s ease}
-.wapr-card:hover .wapr-card-img img{transform:scale(1.04)}
+.wapr-card-img{overflow:hidden}
+.wapr-card-img img{width:100%;height:auto;display:block;transition:transform .5s ease}
+.wapr-card:hover .wapr-card-img img{transform:scale(1.02)}
 .wapr-card-foot{padding:1.1rem 1.25rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-top:1px solid var(--border)}
 .wapr-card-result{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--green-dark);line-height:1.3}
 .wapr-card-chip{flex-shrink:0;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-dark);background:var(--green-light);padding:.28rem .72rem;border-radius:100px}
 
 /* ══════════ R45 VIDEO PAIRS ══════════ */
 .r45-pairs{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:1.5rem}
-.r45-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.08)}
+.r45-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.08);align-items:stretch}
 .r45-pair-img{overflow:hidden}
-.r45-pair-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-.r45-pair-video{overflow:hidden;background:#000}
-.r45-pair-video video{width:100%;height:100%;object-fit:cover;display:block;max-height:520px}
+.r45-pair-img img{width:100%;height:auto;display:block}
+.r45-pair-video{background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.r45-pair-video video{width:100%;height:100%;object-fit:contain;display:block}
 
 /* ══════════ FC EXTRAS ══════════ */
 .fc-social-proof{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-bottom:.4rem}
@@ -648,7 +648,7 @@ img{display:block}
     </div>
 
     <!-- Featured: Mari antes/después -->
-    <div class="wapr-feat">
+    <div class="wapr-feat" style="display:none">
       <div class="wapr-feat-img-wrap rv-l">
         <div class="wapr-feat-img">
           <img src="assets/testimonios/t-mari-antes-despues.jpeg" alt="Antes y después del RESET 45 — Mari, Ciudad Real" loading="lazy">
