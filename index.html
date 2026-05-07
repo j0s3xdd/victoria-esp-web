@@ -456,8 +456,8 @@ img{display:block}
 .r45-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.08);align-items:stretch}
 .r45-pair-img{overflow:hidden}
 .r45-pair-img img{width:100%;height:auto;display:block}
-.r45-pair-video{background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.r45-pair-video video{width:100%;height:100%;object-fit:contain;display:block}
+.r45-pair-video{display:flex;align-items:center;justify-content:center;overflow:hidden}
+.r45-pair-video video{width:100%;height:100%;object-fit:cover;display:block}
 
 /* ══════════ FC EXTRAS ══════════ */
 .fc-social-proof{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-bottom:.4rem}
@@ -525,7 +525,7 @@ img{display:block}
   .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   /* LAYOUTS */
   .wapr-feat{grid-template-columns:1fr}
-  .wapr-card-img{height:300px}
+  .wapr-card-img{height:auto}
   .hero .wrap,.historia .wrap,.reset45-inner,.contacto .wrap{grid-template-columns:1fr;gap:2.5rem}
   .hero-img{order:-1}
   .hero-photo{aspect-ratio:1;border-radius:4px 40px 4px 40px}
@@ -546,6 +546,7 @@ img{display:block}
   .srv-grid{grid-template-columns:1fr}
   .wapr-grid{grid-template-columns:1fr}
   .r45-pair{grid-template-columns:1fr}
+  .r45-pair-video{min-height:220px}
   .hero-actions{flex-direction:column;align-items:flex-start}
 }
 </style>
