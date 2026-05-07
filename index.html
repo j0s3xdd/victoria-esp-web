@@ -451,6 +451,14 @@ img{display:block}
 .wapr-card-result{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--green-dark);line-height:1.3}
 .wapr-card-chip{flex-shrink:0;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-dark);background:var(--green-light);padding:.28rem .72rem;border-radius:100px}
 
+/* ══════════ R45 VIDEO PAIRS ══════════ */
+.r45-pairs{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:1.5rem}
+.r45-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.08)}
+.r45-pair-img{overflow:hidden}
+.r45-pair-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.r45-pair-video{overflow:hidden;background:#000}
+.r45-pair-video video{width:100%;height:100%;object-fit:cover;display:block;max-height:520px}
+
 /* ══════════ FC EXTRAS ══════════ */
 .fc-social-proof{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-bottom:.4rem}
 
@@ -537,6 +545,7 @@ img{display:block}
 @media(max-width:480px){
   .srv-grid{grid-template-columns:1fr}
   .wapr-grid{grid-template-columns:1fr}
+  .r45-pair{grid-template-columns:1fr}
   .hero-actions{flex-direction:column;align-items:flex-start}
 }
 </style>
@@ -660,46 +669,83 @@ img{display:block}
       </div>
     </div>
 
-    <!-- Grid de 4 capturas -->
+    <!-- Parejas: captura + vídeo -->
+    <div class="r45-pairs">
+
+      <div class="r45-pair rv d1">
+        <div class="r45-pair-img">
+          <img src="assets/testimonios/r45-tere-chat.jpeg" alt="Tere: 1.300kg y medidas en 5 días" loading="lazy">
+        </div>
+        <div class="r45-pair-video">
+          <video autoplay muted loop playsinline>
+            <source src="assets/testimonios/r45-tere.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="r45-pair rv d2">
+        <div class="r45-pair-img">
+          <img src="assets/testimonios/r45-mari-chat.jpeg" alt="Mari: cambio abdominal en 5 días" loading="lazy">
+        </div>
+        <div class="r45-pair-video">
+          <video autoplay muted loop playsinline>
+            <source src="assets/testimonios/r45-mari.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Grid de capturas -->
     <div class="wapr-grid">
-
-      <div class="wapr-card rv d1">
-        <div class="wapr-card-img">
-          <img src="assets/testimonios/t-toni-bascula.jpeg" alt="Toñi: de 70.2kg a 67.9kg en 4 días" loading="lazy">
-        </div>
-        <div class="wapr-card-foot">
-          <div class="wapr-card-result">−2.3 kg en solo 4 días</div>
-          <div class="wapr-card-chip">Toñi Expósito · RESET 45</div>
-        </div>
-      </div>
-
-      <div class="wapr-card rv d2">
-        <div class="wapr-card-img">
-          <img src="assets/testimonios/t-1300g-medidas.jpeg" alt="1.3kg y medidas reducidas en 5 días" loading="lazy">
-        </div>
-        <div class="wapr-card-foot">
-          <div class="wapr-card-result">−1.3 kg · 3 cm pecho · 2 cm cintura · 4 cm caderas</div>
-          <div class="wapr-card-chip">5 días</div>
-        </div>
-      </div>
 
       <div class="wapr-card rv d3">
         <div class="wapr-card-img">
-          <img src="assets/testimonios/t-mariajose-3kg.jpeg" alt="Maria José: 3kg en 5 días" loading="lazy">
+          <img src="assets/testimonios/r45-cinturita.jpeg" alt="Clienta mostrando cintura tras el RESET 45" loading="lazy">
         </div>
         <div class="wapr-card-foot">
-          <div class="wapr-card-result">−3 kg en 5 días</div>
-          <div class="wapr-card-chip">Maria José</div>
+          <div class="wapr-card-result">La cinturita que no esperaba</div>
+          <div class="wapr-card-chip">RESET 45</div>
         </div>
       </div>
 
       <div class="wapr-card rv d4">
         <div class="wapr-card-img">
-          <img src="assets/testimonios/t-3dias-900g.jpeg" alt="900g y 3cm de cadera en 3 días" loading="lazy">
+          <img src="assets/testimonios/r45-antesdespues.jpeg" alt="Antes y después RESET 45" loading="lazy">
         </div>
         <div class="wapr-card-foot">
-          <div class="wapr-card-result">−900 g y 3 cm de cadera</div>
-          <div class="wapr-card-chip">Solo 3 días</div>
+          <div class="wapr-card-result">Cambio visible en días</div>
+          <div class="wapr-card-chip">RESET 45</div>
+        </div>
+      </div>
+
+      <div class="wapr-card rv d5">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/r45-mariajose-chat.jpeg" alt="Maria José antes y después" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">"Creo que se nota, ¿no?"</div>
+          <div class="wapr-card-chip">Maria José</div>
+        </div>
+      </div>
+
+      <div class="wapr-card rv d6">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/r45-pantalon.jpeg" alt="La ropa habla por si sola" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">"La ropa habla por sí sola"</div>
+          <div class="wapr-card-chip">RESET 45</div>
+        </div>
+      </div>
+
+      <div class="wapr-card rv d7">
+        <div class="wapr-card-img">
+          <img src="assets/testimonios/r45-3800g.jpeg" alt="De 98.8kg a 95kg en una semana" loading="lazy">
+        </div>
+        <div class="wapr-card-foot">
+          <div class="wapr-card-result">−3.8 kg en una semana</div>
+          <div class="wapr-card-chip">RESET 45</div>
         </div>
       </div>
 
