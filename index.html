@@ -491,9 +491,11 @@ img{display:block}
 
 /* ══════════ VIDEO MODAL ══════════ */
 .trf-video-trigger{cursor:pointer}
-.trf-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s;pointer-events:none}
+.trf-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.65;transition:opacity .25s;pointer-events:none}
 .trf-play-btn svg{width:68px;height:68px;filter:drop-shadow(0 2px 12px rgba(0,0,0,.4))}
 .trf-video-trigger:hover .trf-play-btn{opacity:1}
+.trf-video-badge{position:absolute;bottom:.85rem;left:.85rem;background:rgba(0,0,0,.58);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .75rem;border-radius:100px;display:flex;align-items:center;gap:.4rem;backdrop-filter:blur(4px)}
+.trf-video-badge::before{content:'▶';font-size:.6rem}
 .vid-modal{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
 .vid-modal.open{opacity:1;visibility:visible}
 .vid-modal video{max-width:min(480px,92vw);max-height:86vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,.6)}
@@ -1011,6 +1013,7 @@ img{display:block}
               <polygon points="22,17 42,28 22,39" fill="#ffffff"/>
             </svg>
           </div>
+          <div class="trf-video-badge">Ver vídeo</div>
         </div>
         <div class="trf-body">
           <div class="trf-result">−19 kilos · Transformación completa</div>
